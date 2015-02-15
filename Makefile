@@ -1,6 +1,12 @@
-CFLAGS=-Wall
+CFLAGS=-Wall -g
 
-all: clean 3/ex3
+SRC_FILES=3/ex3.c 4/ex4.c
+EXC_FILES=$(patsubst %.c, %, $(SRC_FILES))
+
+DEBUG_FILES=$(patsubst %.c, %.dSYM, $(SRC_FILES))
+
+
+all: clean $(EXC_FILES)
 
 clean:
-	rm -fr 3/ex3
+	rm -fr $(EXC_FILES) $(DEBUG_FILES)

@@ -1,0 +1,10 @@
+{
+   <suppression_1>
+   Memcheck:Cond
+   fun:__vfprintf
+   fun:__v2printf
+   fun:__xvprintf
+   fun:vfprintf_l
+   fun:printf
+   fun:main
+}
